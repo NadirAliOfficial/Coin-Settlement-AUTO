@@ -34,10 +34,10 @@ def solve_captcha(api_key, site_key, page_url):
 def login(driver, username, password):
     driver.get("https://secured.tfxi.sc/auth/login")
     WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.NAME, "username"))
+        EC.presence_of_element_located((By.ID, "login"))
     ).send_keys(username)
-    driver.find_element_by_name("password").send_keys(password)
-    driver.find_element_by_name("login").click()
+    driver.find_element(By.ID, "password").send_keys(password)
+    driver.find_element(By.ID, "loginButton").click()
 
 
 # Function to navigate to coin settlement
