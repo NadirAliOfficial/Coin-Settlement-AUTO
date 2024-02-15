@@ -96,7 +96,7 @@ def main():
     page_url = "https://secured.tfxi.sc/auth/login"
 
     # Path to Chromedriver executable
-    chromedriver_path = r"d:\Work Fiverr\code\py\chromedriver.exe"  # Replace this with the actual path to chromedriver.exe
+    chromedriver_path = r"F:\chromedriver-win64\chromedriver-win64\chromedriver.exe"  # Replace this with the actual path to chromedriver.exe
 
     # Initialize Chromedriver service
     service = webdriver.chrome.service.Service(chromedriver_path)
@@ -106,7 +106,7 @@ def main():
 
     try:
         # Step 1: Login
-        login(driver, "8189056", "Kldbae99!")
+        login(driver, "8189056", "Qjmisj6999!!!")
 
         # Step 2: Navigate to coin settlement
         navigate_to_coin_settlement(driver)
