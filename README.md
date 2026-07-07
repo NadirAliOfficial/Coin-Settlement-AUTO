@@ -1,25 +1,37 @@
 # Coin Settlement Auto
 
-Automated coin settlement script that handles crypto payment processing and settlement workflows.
+Automated cryptocurrency settlement workflow — monitors wallet balances, processes pending settlements, and handles error recovery.
 
 ## Features
-- Automated settlement detection
+
+- Auto-detect incoming transactions
+- Settlement queue with retry logic
+- Error handling and logging
 - Configurable thresholds and intervals
-- Logging and error reporting
+- Tweet notifications on settlement events
 
-## Requirements
-```
-pip install -r requirements.txt
-```
+## Setup
 
-## Configuration
-Edit `config.py` with your API keys and settlement parameters.
-
-## Usage
 ```bash
-python main.py
+pip install -r requirements.txt
+cp .env.example .env  # Add your API keys
+python auto.py
 ```
 
-## License
-MIT
-<!-- updated: 2025-11-21-r01 -->
+## Config
+
+```env
+WALLET_ADDRESS=your_wallet
+API_KEY=your_exchange_api_key
+MIN_SETTLEMENT=0.001
+CHECK_INTERVAL=30
+```
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `auto.py` | Main settlement loop |
+| `Coin Updated.py` | Core settlement logic |
+| `ErrorHnadling.py` | Error recovery handler |
+| `tweet.py` | Twitter notification on events |
